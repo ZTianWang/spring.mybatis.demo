@@ -17,7 +17,7 @@
     <insert id="insert" parameterType="Role" useGeneratedKeys="true" keyColumn="id">  
        insert into <include refid="TABLE"/> (<include refid="INSERT_FIELDS"/>) values(<include refid="INSERT_VALUES"/>,1)  
     </insert>
-
+	
     <update id="updateValid">
         UPDATE <include refid="TABLE"/>
         SET valid=0

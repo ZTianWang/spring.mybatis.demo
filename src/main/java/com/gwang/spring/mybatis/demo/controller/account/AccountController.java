@@ -32,12 +32,14 @@ public class AccountController {
 	@RequestMapping("/page/list")
 	public String accountListPage (AccountSearchParam accountSearchParam, Model model) {
 		try {
+//			System.out.println("account");
 			AccountPage page = accountService.search(accountSearchParam);
 			model.addAttribute("page", page);
 			logger.info("acccount list.size:{},list:{}", page.getTotal(), page.getAccounts());
 			return "account/list";
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
+			e.printStackTrace();
 			return "error";
 		}
 	}

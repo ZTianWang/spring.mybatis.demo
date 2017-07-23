@@ -24,7 +24,9 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- DispatcherServlet -->
+<!-- 请求分发器:/ -->
+	<!-- DispatcherServlet
+		springMVC核心控制器 -->
 	<servlet>
 		<servlet-name>dispatcherServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -39,7 +41,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
-	<!-- encoding -->
+<!-- spring提供的encoding转换 -->
 	<filter>
 		<filter-name>Character Encoding</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
